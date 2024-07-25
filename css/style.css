@@ -1,0 +1,95 @@
+*{
+padding : 0;
+margin : 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+img{
+    width: 400px;
+}
+form{
+    width: 25%;
+    border: 1px solid #000;
+    padding: 10px;
+}
+form h1{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form_control{
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.form_control input{
+    width: 100%;
+    height: 35px;
+}
+.form_control.error input{
+    border: 1px solid red;
+}
+.form_control.success input{
+    border: 1px solid green;
+}
+.form_control i{
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    visibility: hidden;
+}
+.form_control.error .fa-times-circle-o{
+    visibility: visible;
+    color:red;
+}
+.form_control.success .fa-check-circle{
+    visibility: visible;
+    color: green;
+}
+.form_control small{
+    color: red;
+    text-transform: capitalize;
+    font-size: .7rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    visibility: hidden;
+}
+.form_control.error small{
+    visibility: visible;
+}
+form button{
+    width: 100%;
+    height: 40px;
+    background:linear-gradient(30deg,red ,green) ;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    body{
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .main{
+        flex-direction: column;
+    }
+    img{
+        width: 200px;
+    }
+    form{
+        width:70%;
+    }
+}
